@@ -57,6 +57,7 @@ export class TodoControllerBase {
       },
       select: {
         createdAt: true,
+        hello: true,
         id: true,
 
         owner: {
@@ -86,6 +87,7 @@ export class TodoControllerBase {
       ...args,
       select: {
         createdAt: true,
+        hello: true,
         id: true,
 
         owner: {
@@ -116,6 +118,7 @@ export class TodoControllerBase {
       where: params,
       select: {
         createdAt: true,
+        hello: true,
         id: true,
 
         owner: {
@@ -163,6 +166,7 @@ export class TodoControllerBase {
         },
         select: {
           createdAt: true,
+          hello: true,
           id: true,
 
           owner: {
@@ -201,6 +205,7 @@ export class TodoControllerBase {
         where: params,
         select: {
           createdAt: true,
+          hello: true,
           id: true,
 
           owner: {
