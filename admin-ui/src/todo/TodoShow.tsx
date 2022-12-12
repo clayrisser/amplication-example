@@ -14,6 +14,7 @@ export const TodoShow = (props: ShowProps): React.ReactElement => {
     <Show {...props}>
       <SimpleShowLayout>
         <DateField source="createdAt" label="Created At" />
+        <TextField label="Hello" source="hello" />
         <TextField label="ID" source="id" />
         <ReferenceField label="Owner" source="user.id" reference="User">
           <TextField source={USER_TITLE_FIELD} />
