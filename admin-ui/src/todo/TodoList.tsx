@@ -21,6 +21,7 @@ export const TodoList = (props: ListProps): React.ReactElement => {
     >
       <Datagrid rowClick="show">
         <DateField source="createdAt" label="Created At" />
+        <TextField label="Hello" source="hello" />
         <TextField label="ID" source="id" />
         <ReferenceField label="Owner" source="user.id" reference="User">
           <TextField source={USER_TITLE_FIELD} />
