@@ -13,8 +13,8 @@ import { ObjectType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
 import {
   IsDate,
-  IsString,
   IsOptional,
+  IsString,
   IsJSON,
   ValidateNested,
 } from "class-validator";
@@ -24,6 +24,17 @@ import { JsonValue } from "type-fest";
 import { Todo } from "../../todo/base/Todo";
 @ObjectType()
 class User {
+  @ApiProperty({
+    required: false,
+  })
+  @IsDate()
+  @Type(() => Date)
+  @IsOptional()
+  @Field(() => Date, {
+    nullable: true,
+  })
+  birthday!: Date | null;
+
   @ApiProperty({
     required: true,
   })
