@@ -8,19 +8,21 @@ generator client {
 }
 
 model User {
-  createdAt DateTime @default(now())
+  birthday  DateTime?
+  createdAt DateTime  @default(now())
   firstName String?
-  id        String   @id @default(cuid())
+  id        String    @id @default(cuid())
   lastName  String?
   password  String
   roles     Json
   todos     Todo[]
-  updatedAt DateTime @updatedAt
-  username  String   @unique
+  updatedAt DateTime  @updatedAt
+  username  String    @unique
 }
 
 model Todo {
   createdAt DateTime @default(now())
+  hello     String?
   id        String   @id @default(cuid())
   owner     User?    @relation(fields: [ownerId], references: [id])
   ownerId   String?

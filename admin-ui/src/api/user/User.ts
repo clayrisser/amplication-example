@@ -2,6 +2,7 @@ import { JsonValue } from "type-fest";
 import { Todo } from "../todo/Todo";
 
 export type User = {
+  birthday: Date | null;
   createdAt: Date;
   firstName: string | null;
   id: string;

@@ -4,6 +4,7 @@ import {
   Edit,
   SimpleForm,
   EditProps,
+  DateTimeInput,
   TextInput,
   PasswordInput,
   SelectArrayInput,
@@ -17,6 +18,7 @@ export const UserEdit = (props: EditProps): React.ReactElement => {
   return (
     <Edit {...props}>
       <SimpleForm>
+        <DateTimeInput label="Birthday" source="birthday" />
         <TextInput label="First Name" source="firstName" />
         <TextInput label="Last Name" source="lastName" />
         <PasswordInput label="Password" source="password" />

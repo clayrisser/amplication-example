@@ -77,7 +77,7 @@ export class UserServiceBase {
     args: Prisma.TodoFindManyArgs
   ): Promise<Todo[]> {
     return this.prisma.user
-      .findUnique({
+      .findUniqueOrThrow({
         where: { id: parentId },
       })
       .todos(args);
